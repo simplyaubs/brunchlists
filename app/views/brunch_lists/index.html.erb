@@ -1,0 +1,21 @@
+<%= form_for @brunch_list do |f| %>
+  <p>
+    <%= f.label :restaurant %>
+    <%= f.text_field :restaurant %>
+  </p>
+  <p>
+    <%= f.label :rating %>
+    <%= f.text_field :rating %>
+  </p>
+  <p>
+    <%= f.submit 'Add brunch spot' %>
+  </p>
+<% end %>
+
+<%= @brunch_lists.each do |brunch| %>
+<ul>
+  <li>
+    <%= brunch.restaurant %>, <%= brunch.rating %>
+  </li>
+</ul>
+<% end %>
