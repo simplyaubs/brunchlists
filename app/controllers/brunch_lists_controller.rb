@@ -29,6 +29,12 @@ class BrunchListsController < ApplicationController
     redirect_to brunch_lists_path(@brunch_list)
   end
 
+  def destroy
+    @brunch_list = BrunchList.find(params[:id]).delete
+
+    redirect_to brunch_lists_path
+  end
+
   private
   def brunch_list_params
     params.require(:brunch_list).permit(:restaurant, :rating)
