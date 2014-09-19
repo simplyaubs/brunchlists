@@ -8,14 +8,6 @@
     <%= f.text_field :rating %>
   </p>
   <p>
-    <%= f.submit 'Add brunch spot' %>
+    <%= f.submit 'Update Restaurant' %>
   </p>
-<% end %>
-
-<% @brunch_lists.each do |brunch| %>
-<ul>
-  <li>
-    <%= link_to "#{brunch.restaurant}", brunch_list_path(brunch) %>, <%= brunch.rating %>
-  </li>
-</ul>
 <% end %>

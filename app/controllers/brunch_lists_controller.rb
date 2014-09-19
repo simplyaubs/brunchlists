@@ -14,6 +14,21 @@ class BrunchListsController < ApplicationController
     end
   end
 
+  def show
+    @brunch_list = BrunchList.find(params[:id])
+  end
+
+  def edit
+    @brunch_list = BrunchList.find(params[:id])
+  end
+
+  def update
+    @brunch_list = BrunchList.find(params[:id])
+    @brunch_list.update_attributes!(brunch_list_params)
+
+    redirect_to brunch_lists_path(@brunch_list)
+  end
+
   private
   def brunch_list_params
     params.require(:brunch_list).permit(:restaurant, :rating)
