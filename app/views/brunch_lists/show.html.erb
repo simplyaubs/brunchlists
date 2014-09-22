@@ -1,8 +1,10 @@
-<ul>
-  <li>
-    <%= @brunch_list.restaurant %>, <%= @brunch_list.rating %>
-  </li>
-</ul>
+<div class="center">
+  <ul>
+    <li>
+      <%= @brunch_list.restaurant %>, <%= @brunch_list.rating %>
+    </li>
+  </ul>
 
-<%= link_to 'Edit', edit_brunch_list_path %>
-<%= link_to 'Delete', brunch_list_path, method: :delete %>
+  <%= link_to 'Edit', edit_brunch_list_path %>
+  <%= link_to 'Delete', brunch_list_path, method: :delete %>
+</div>
