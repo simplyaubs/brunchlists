@@ -1,22 +1,28 @@
 <div class="center">
 
   <h1>Add a Brunch List</h1>
-
+<table class="table_center">
   <%= form_for @brunch_list do |f| %>
+    <tr>
     <p>
-      <%= f.label :restaurant %>
-      <%= f.text_field :restaurant %>
+     <td> <%= f.label :restaurant %></td>
+     <td> <%= f.text_field :restaurant %></td>
     </p>
-
+    </tr>
+    <tr>
     <p>
-      <%= f.label :rating %>
-      <%= f.text_field :rating %>
+    <td><%= f.label :rating %></td>
+    <td><%= f.text_field :rating %></td>
     </p>
-
+    </tr>
+    <tr>
     <p>
-      <%= f.submit 'Add brunch spot' %>
+      <td></td>
+      <td><%= f.submit 'Add brunch spot' %></td>
     </p>
+    </tr>
   <% end %>
+</table>
 
   <% @brunch_lists.each do |brunch| %>
     <ul>
